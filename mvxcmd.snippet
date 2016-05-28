@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>mvxcmd</Title>
+      <Shortcut>mvxcmd</Shortcut>
+      <Description>動作的程式碼片段。</Description>
+      <Author>Dino Wang</Author>
+	  <SnippetTypes>
+		<SnippetType>Expansion</SnippetType>
+	  </SnippetTypes>
+      <ProjectTypeGuids>{BF6E204B-ABB3-4883-9F0D-15975880342C};{4AF4487D-0C3E-4384-BA68-62CB1680C648}</ProjectTypeGuids>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Windows.Input</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>intent</ID>
+          <ToolTip>取代為行為的名稱</ToolTip>
+          <Default>ClickCommand</Default>
+        </Literal>
+        <Literal>
+          <ID>handler</ID>
+          <ToolTip>取代為處理函式的名稱</ToolTip>
+          <Default>Click</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp"><![CDATA[public ICommand $intent$ => new MvxCommand($handler$);
+
+      private void $handler$()
+      {
+      }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

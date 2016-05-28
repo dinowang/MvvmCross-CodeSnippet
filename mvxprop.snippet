@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>mvxprop</Title>
+      <Shortcut>mvxprop</Shortcut>
+      <Description>動作的程式碼片段。</Description>
+      <Author>Dino Wang</Author>
+	  <SnippetTypes>
+		<SnippetType>Expansion</SnippetType>
+	  </SnippetTypes>
+      <ProjectTypeGuids>{BF6E204B-ABB3-4883-9F0D-15975880342C};{4AF4487D-0C3E-4384-BA68-62CB1680C648}</ProjectTypeGuids>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>取代為屬性的型別</ToolTip>
+          <Default>string</Default>
+        </Literal>
+        <Literal>
+          <ID>fieldname</ID>
+          <ToolTip>取代為欄位的名稱</ToolTip>
+          <Default>_name</Default>
+        </Literal>
+        <Literal>
+          <ID>propertyname</ID>
+          <ToolTip>取代為屬性的名稱</ToolTip>
+          <Default>Name</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp"><![CDATA[private $type$ $fieldname$;
+
+      public $type$ $propertyname$
+      {
+          get { return $fieldname$; }
+          set { SetProperty(ref $fieldname$, value); }
+      }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
